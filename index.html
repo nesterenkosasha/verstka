@@ -4,31 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>pageVerstka</title>
+    <title>Nix</title>
   
 <link rel="stylesheet" href="./style.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 </head>
 <body>
-        <header class="section black container row header">
-                <img src="http://via.placeholder.com/35x34" alt="logo" class="logo">
+        <header class="section black row header">
+                <img src="http://via.placeholder.com/35x34" alt="logo" class="navigation-logo logo">
                 <nav class="navigation">
                     <ul class="row navigation-list">
-                        <li class="navigation-item"><a>ABOUT</a></li>
-                        <li class="navigation-item"><a>SERVICES</a></li>
-                        <li class="navigation-item"><a>TOURS</a></li>
-                        <li class="navigation-item"><a>PORTFOLIO</a></li>
-                        <li class="navigation-item"><a>CONTACT</a></li>
+                        <li class="navigation-item"><a href="#" class="link">ABOUT</a></li>
+                        <li class="navigation-item"><a href="#map" class="link">SERVICES</a></li>
+                        <li class="navigation-item"><a href="#price" class="link">TOURS</a></li>
+                        <li class="navigation-item"><a href="#portfolio" class="link">PORTFOLIO</a></li>
+                        <li class="navigation-item"><a href="#contact" class="link">CONTACT</a></li>
                     </ul>
                 </nav>
-                <i class="user fas fa-user f"></i>                      
+                <i class="navigation-user user fas fa-user f"></i>
+                    <ul class="toggle-list">
+                        <li class="toggle-item"><a href="#" class="link">ABOUT</a></li>
+                        <li class="toggle-item"><a href="#map" class="link">SERVICES</a></li>
+                        <li class="toggle-item"><a href="#price" class="link">TOURS</a></li>
+                        <li class="toggle-item"><a href="#portfolio" class="link">PORTFOLIO</a></li>
+                        <li class="toggle-item"><a href="#contact" class="link">CONTACT</a></li>
+                    </ul>
         </header>
         <!-- -END HEADER -->
-
         <main>
             <!-- section info -->
-
-
                 <section class="section">
                     <h1 class="title">Information</h1>
                         <p class="hidden sub-title sub-title-information">
@@ -52,7 +56,7 @@
                                 </div> 
                                 <!--  -->
                             </div>
-                                <img src="http://via.placeholder.com/215x414" alt="phone 215*414">
+                                <img id="phone" src="http://via.placeholder.com/215x414" alt="phone 215*414">
 
 
                                 <div class="information-column-servise">
@@ -77,159 +81,145 @@
                             </div>
                 </section>
                 <!-- end section info -->
-
                 <!-- section portfolio -->
-                <section class="section black">
+                <section id="portfolio" class="section black">
                     <h2 class="title">Portfolio</h2>
                     <p class="hidden sub-title sub-title-portfolio">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint </p>
                     <div class="row carusel">
                             <i class="button-arrow fas fa-angle-left"></i>
                  
                             <ul class="row carusel-img">
-                                    <li class="carusel-img-li"><img src="http://via.placeholder.com/235x220" alt=""></li>
-                                    <li class="carusel-img-li"><img src="http://via.placeholder.com/235x220" alt=""></li>
-                                    <li class="carusel-img-li"><img src="http://via.placeholder.com/235x220" alt=""></li>
-                                    <li class="carusel-img-li"><img src="http://via.placeholder.com/235x220" alt=""></li>
+                                    <li class="carusel-img-li"><img src="http://via.placeholder.com/235x220" alt="image" id="first"></li>
+                                    <li class="second carusel-img-li"><img src="http://via.placeholder.com/235x220" alt="image" id="second"></li>
+                                    <li class="third carusel-img-li"><img src="http://via.placeholder.com/235x220" alt="image" id="third"></li>
+                                    <li class="fouth carusel-img-li"><img src="http://via.placeholder.com/235x220" alt="image" id="fouth"></li>
                             </ul>
                             <i class="button-arrow fas fa-angle-right"></i>
                     </div>
                 </section>
                 <!-- end section portfolio -->
-
                 <!-- section price -->
-                <section class="section">
+                <section id="price" class="section">
                     <h2 class="title">Price</h2>
-                    <div class="col">
+                    <div class="row price-columns">
                         <!-- 1 -->
-                        <div class="column">
-                            <div class="col-head1">START</div>
-                            <div class="col-content" >
-                                <span class="col-h4">FEATURE</span>
-                                <p class="col-p hidden">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
+                        <div class="title column">
+                            <div class="column-head">START</div>
+                            <div class="column-content" >
+                                <span class="column-content-title">FEATURE</span>
+                                <p class="hidden column-content-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
                                         voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est soluta. Et harum quidem rerum facilis est soluta. Et harum quidem rerum facilis est soluta.
                                 </p>
-                                <h4 class="col-h4">FEATURE</h4>
-                                <p class="col-p hidden">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
+                                <span class="column-content-title">FEATURE</span>
+                                <p class="hidden column-content-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
                                         voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est soluta. Et harum quidem rerum facilis est soluta. Et harum quidem rerum facilis est soluta.
                                 </p>
-                                <h4 class="col-h4">FEATURE</h4>
-                                <p class="col-p hidden">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
+                                <span class="column-content-title">FEATURE</span>
+                                <p class="hidden column-content-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
                                         voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est soluta. Et harum quidem rerum facilis est soluta. Et harum quidem rerum facilis est soluta.
                                 </p> 
-                                <div class="col-price">100$</div>
+                                <div class="column-price">100$</div>
                                 <a class="choose" href="#">CHOOSE</a>
                             </div>                      
                         </div> 
                         <!--  -->
                         <!--2  -->
-                        <div class="column">
-                            <div class="col-head1">START</div>
-                            <div class="col-content" >
-                                <h4 class="col-h4">FEATURE</h4>
-                                <p class="col-p hidden">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
+                        <div class="second title column">
+                            <div class="column-head">START</div>
+                            <div class="column-content" >
+                                <span class="column-content-title">FEATURE</span>
+                                <p class="hidden column-content-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
                                         voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est soluta. Et harum quidem rerum facilis est soluta. Et harum quidem rerum facilis est soluta.
                                 </p>
-                                <h4 class="col-h4">FEATURE</h4>
-                                <p class="col-p hidden">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
+                                <span class="column-content-title">FEATURE</span>
+                                <p class="hidden column-content-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
                                         voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est soluta. Et harum quidem rerum facilis est soluta. Et harum quidem rerum facilis est soluta.
                                 </p>
-                                <h4 class="col-h4">FEATURE</h4>
-                                <p class="col-p hidden">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
+                                <span class="column-content-title">FEATURE</span>
+                                <p class="hidden column-content-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
                                         voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est soluta. Et harum quidem rerum facilis est soluta. Et harum quidem rerum facilis est soluta.
                                 </p> 
-                                <div class="col-price">100$</div>
+                                <div class="column-price">100$</div>
                                 <a class="choose" href="#">CHOOSE</a>
                             </div>                      
-                        </div> 
+                        </div>
                         <!--  -->
                         <!--  3-->
-                        <div class="column">
-                            <div class="col-head1">START</div>
-                            <div class="col-content" >
-                                <h4 class="col-h4">FEATURE</h4>
-                                <p class="col-p hidden">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
+                        <div class="third title column">
+                            <div class="column-head">START</div>
+                            <div class="column-content" >
+                                <span class="column-content-title">FEATURE</span>
+                                <p class="hidden column-content-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
                                         voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est soluta. Et harum quidem rerum facilis est soluta. Et harum quidem rerum facilis est soluta.
                                 </p>
-                                <h4 class="col-h4">FEATURE</h4>
-                                <p class="col-p hidden">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
+                                <span class="column-content-title">FEATURE</span>
+                                <p class="hidden column-content-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
                                         voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est soluta. Et harum quidem rerum facilis est soluta. Et harum quidem rerum facilis est soluta.
                                 </p>
-                                <h4 class="col-h4">FEATURE</h4>
-                                <p class="col-p hidden">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
+                                <span class="column-content-title">FEATURE</span>
+                                <p class="hidden column-content-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium 
                                         voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est soluta. Et harum quidem rerum facilis est soluta. Et harum quidem rerum facilis est soluta.
                                 </p> 
-                                <div class="col-price">100$</div>
+                                <div class="column-price">100$</div>
                                 <a class="choose" href="#">CHOOSE</a>
                             </div>                      
-                        </div> 
-                        <!-- end3 -->
-                    
+                        </div>
+                        <!-- end3 --> 
                     </div> 
                 </section>
                 <!-- end section price -->
-
                 <!-- section contact us -->
-                <section class="section low black">
-                        <h2 class="title">Contact us</h2>
+                <section id="contact" class="section black low">
+                        <h2 class="contact">Contact us</h2>
                         <p class="hidden contact-content">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.    
                         </p>
                 </section>
                 <!-- end section contact us -->
-
                 <!-- section map -->
-                <section class="map">
-                        <div class="map-left">
+                <div id="map" class="row section low">
+                        <div class="map">
                             <input type="text" placeholder="Name" class="input">
                             <input type="text" placeholder="E-mail" class="input">
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Your text" class="input"></textarea>
-                            <div class="map-to-flex">
-                                <span class="hidden little">At vero eos et accu sam iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint</span>
+                            <textarea name="text" cols="30" rows="10" placeholder="Your text" class="input"></textarea>
+                            <div class="row">
+                                <span class="little">At vero eos et accu</span>
                                 <button class="button">BUTTON</button>
                             </div>
                         </div>
                         
-                        <div class="map-right">
+                        <div class="map">
                             <p class="map-text">WHERE TO FIND US</p>
-                            <map name="">
+                            <map name="map">
                                 <img src="http://via.placeholder.com/406x226" alt="map" class="map-image">
                             </map>
                             <p class="map-text">CONTACTS</p>
-                            <div class="map-contact">
-                                <ul class="psevdo-ul">
+                                <ul class="map-ul">
                                     <li class="psevdo-map"><i class="psevdo fas fa-map-marker-alt"></i></li>
                                     <li class="psevdo-env"><i class="psevdo fas fa-envelope"></i></li>
                                     <li class="psevdo-phone"><i class="psevdo fas fa-phone"></i></li>
                                 </ul>
-                            </div>
 
                         </div>
-                </section>
+                </div>
                 <!-- end section map -->
-
                 <!-- section last -->
-                <section class="section black">
-
+                <div class="last-section section black low">
                         <img src="http://via.placeholder.com/35x34" alt="logo" class="logo">
-
-                        <p class="hidden last">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.    
+                        <p class="hidden last-section-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.    
                         </p>
                         <button class="button">BUTTON</button>
-                </section>
-                <!-- end section last -->                         
+                </div>
+                <!-- end section last -->                
             </main>
         <footer class="footer">
-            <div class="container">
-                <ul class="bottom-nav">
-                    <li class="bottom-li">ABOUT</li>
-                    <li class="bottom-li">SERVICES</li>
-                    <li class="bottom-li">TOURS</li>
-                    <li class="bottom-li">PORTFOLIO</li>
-                    <li class="bottom-li">CONTACT</li>
+                <ul class="row footer-navigation">
+                    <li class="footer-navigation-item"><a href="#" class="link">ABOUT</a></li>
+                    <li class="footer-navigation-item"><a href="#map" class="link">SERVICES</a></li>
+                    <li class="footer-navigation-item"><a href="#price" class="link">TOURS</a></li>
+                    <li class="footer-navigation-item"><a href="#portfolio" class="link">PORTFOLIO</a></li>
+                    <li class="footer-navigation-item"><a href="#contact" class="link">CONTACT</a></li>
                 </ul>
-                
                 <p class="footer-text">@ At vero eos et accusamus et iusto odi, 2017</p>
-            </div>
         </footer>
-    </div>
 </body>
 </html>
